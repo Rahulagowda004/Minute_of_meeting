@@ -25,7 +25,7 @@ The server component that:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/username/Minute_of_meeting.git
+   git clone https://github.com/Rahulagowda004/Minute_of_meeting.git
    cd Minute_of_meeting
    ```
 
