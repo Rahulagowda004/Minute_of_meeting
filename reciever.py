@@ -44,7 +44,7 @@ def handle_client(conn, addr):
 
 # Set up server
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('0.0.0.0', 12345))  # Listen on all interfaces
+server.bind(('10.21.50.10', 12345))  # Listen on all interfaces
 server.listen()
 print("Audio server listening on port 12345...")
 
