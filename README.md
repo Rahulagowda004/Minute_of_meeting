@@ -1,11 +1,3 @@
-# Minute of Meeting
-
-A voice activity detection and audio transmission system for capturing and sharing meeting audio.
-
-## Overview
-
-This project implements a voice-triggered audio recording and transmission system. It automatically detects when someone is speaking during a meeting, captures that audio, and periodically sends it to a receiver for playback or storage.
-
 ## Features
 
 - **Voice Activity Detection (VAD)**: Automatically detects when speech is occurring
@@ -13,8 +5,6 @@ This project implements a voice-triggered audio recording and transmission syste
 - **Buffered Recording**: Includes padding before and after speech to avoid clipping
 - **Periodic Transmission**: Sends recorded speech segments at configurable intervals
 - **Client-Server Architecture**: Separate components for audio capture and reception
-
-## Components
 
 ### 1. VAD Sender (`vad_sender.py`)
 
@@ -30,18 +20,6 @@ The server component that:
 - Saves received audio as WAV files
 - Automatically plays back received audio
 
-### 3. Basic Chat Client/Server (`sender.py`)
-
-A simple text messaging client/server implementation.
-
-## Requirements
-
-```
-sounddevice
-numpy
-webrtcvad
-requests
-```
 
 ## Installation
 
@@ -79,10 +57,3 @@ python vad_sender.py
 
 The system will begin listening for speech, capturing audio when speech is detected, and sending it to the configured server every 30 seconds.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Author
-
-Rahul A Gowda (2025)
