@@ -25,18 +25,19 @@ def handle_client(conn, addr):
 
         # Save the received audio
         filename = f"received_from_{addr[0]}.wav"
-        with open(filename, 'wb') as f:
+        out_path = os.path.join("received_audio", filename)
+        with open(out_path, 'wb') as f:
             f.write(received)
-        print(f"Saved received audio to {filename}")
+        print(f"Saved received audio to {out_path}")
 
         # Playback the audio
         print("Playing received audio...")
         if platform.system() == 'Windows':
-            os.system(f'start {filename}')
+            os.system(f'start {out_path}')
         elif platform.system() == 'Darwin':
-            os.system(f'afplay {filename}')
+            os.system(f'afplay {out_path}')
         else:
-            os.system(f'aplay {filename}')
+            os.system(f'aplay {out_path}')
     except Exception as e:
         print(f"Error: {e}")
     finally:
