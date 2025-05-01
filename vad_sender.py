@@ -142,7 +142,8 @@ def send_audio_periodically():
                     
                     # Save a local copy for debugging (optional)
                     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                    with open(f"sent_audio_{timestamp}.wav", 'wb') as f:
+                    out_path = os.path.join("sent_audio", f"sent_audio_{timestamp}.wav")
+                    with open(f"out_path", 'wb') as f:
                         f.write(wav_data)
                     
                     # Reset speech segments
